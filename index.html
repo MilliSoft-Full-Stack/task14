@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Intro</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <script>
+        /* 1 */
+
+        console.log("                                        -1- \n");
+
+
+
+        let cem = 0;
+
+        for (let i = 1; i <= 10; i++) {
+            cem += i;
+        }
+
+        console.log("1-den 10-a qeder ededlerin cemi: " + cem);
+
+        /*  */
+        console.log(" ");
+        /*  */
+
+        let hasil = 1;
+
+        for (let i = 1; i <= 10; i++) {
+            hasil *= i;
+        }
+
+        console.log("1-den 10-a qeder ededlerin cemi: " + hasil);
+
+        /* / 1 */
+
+
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 2 */
+
+        console.log("                                        -2- \n");
+
+
+        console.log("1-den 100-edek cut ededler: \n");
+
+        for (let i = 1; i <= 100; i++) {
+            if (i % 2 === 0) {
+                console.log(i);
+            }
+        }
+
+        /*  */
+        console.log(" ");
+        /*  */
+
+        let cutlerCemi = 0;
+
+        for (let i = 1; i <= 100; i++) {
+            if (i % 2 === 0) {
+                cutlerCemi += i;
+            }
+        }
+        
+        console.log("1-den 100-edek cut ededlerin cemi: " + cutlerCemi);
+
+        /*  */
+        console.log(" ");
+        /*  */
+
+        let cutlerHasili = 1;
+
+        for (let i = 1; i <= 100; i++) {
+            if (i % 2 === 0) {
+                cutlerHasili *= i;
+            }
+        }
+        
+        console.log("1-den 100-edek cut ededlerin hasili: " + cutlerHasili);
+
+        
+        /* / 2 */
+
+        
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 3 */
+
+        console.log("                                        -3- \n");
+
+
+        let ededCemi = 0;
+        let ededSayi = 0;
+
+        for (let i = 100; i <= 999; i++) {
+            ededCemi += i;
+            ededSayi++;
+        }
+
+        let edediOrta = ededCemi / ededSayi;
+
+        console.log("Uc reqemli ededlerin ededi ortasi: " + edediOrta);
+
+
+        /* / 3 */
+
+        
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 4 */
+
+        console.log("                                        -4- \n");
+
+
+
+        console.log("7 ve 8-e bolunen ucreqemli ededler: \n ");
+
+        for (let i = 100; i <= 999; i++) {
+            if (i % 7 === 0 && i % 8 === 0) {
+                console.log(i);
+            }
+        }
+
+        /* / 4 */
+
+        
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 5 */
+
+        console.log("                                        -5- \n");
+
+        ucreqemliCem = 0;
+
+        for (let i = 100; i <= 999; i++) {
+            if (i % 7 === 0 && i % 8 === 0) {
+                ucreqemliCem += i;
+            }
+        }
+
+        console.log("7 ve 8-e bolunen ucreqemli ededlerin cemi: " + ucreqemliCem);
+
+
+        /* / 5 */
+
+        
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 6 */
+
+        console.log("                                        -6- \n");
+
+
+        for (let i = 100; i <= 999; i++) {
+            if (i % 7 === 0 && i % 8 === 0) {
+                console.log("7 ve 8-e bolunen ilk ucreqemli eded: " + i);
+                break;
+            }
+        }
+
+
+        /* / 6 */
+
+        
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 7 */
+
+        console.log("                                        -7- \n");
+
+
+        for (let i = 100; i <= 999; i++) {
+            if (i % 7 === 0 && i % 8 === 0) {
+                son=i;
+            }
+        }
+        
+        console.log("7 ve 8-e bolunen son ucreqemli eded: " + son);
+
+
+        /* / 7 */
+
+        
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 8 */
+
+        console.log("                                        -8- \n");
+
+
+        console.log("1-den 100-dek sade ve murekkeb ededler: \n\n");
+    
+        for (let i = 1; i <= 100; i++) {
+            let murekkebEded = false;
+
+            for (let j = 2; j < i; j++) {
+                if (i % j === 0) {
+                    murekkebEded = true;
+                }
+            }
+
+            if (murekkebEded) {
+                console.log(i + " murekkeb ededdir");
+            } else {
+                console.log(i + " sade ededdir");
+            }
+        }
+
+
+        /* / 8 */
+
+        
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 9 */
+
+        console.log("                                        -9- \n");
+
+
+        console.log("Verilmis ededlerin :");
+
+        let num1 = 45;
+        let num2 = 78;
+        let num3 = 23;
+
+        let enBoyuk = Math.max(num1, num2, num3);
+        let enKicik = Math.min(num1, num2, num3);
+
+        console.log("En boyuyu: " + enBoyuk);
+        console.log("En kiciyi: " + enKicik);
+
+        /* ve ya: */ console.log("Ve ya : \n");
+
+        let numb1 = 27;
+        let numb2 = 53;
+        let numb3 = 85;
+
+
+        let enBoyukk = numb1;
+        if (numb2 > enBoyukk) {
+            enBoyukk = numb2;
+        }
+        if (numb3 > enBoyukk) {
+            enBoyukk = numb3;
+        }
+
+
+        let enKicikk = numb1;
+        if (numb2 < enKicikk) {
+            enKicikk = numb2;
+        }
+        if (numb3 < enKicikk) {
+            enKicikk = numb3;
+        }
+
+        console.log("En boyuk: " + enBoyukk);
+        console.log("En kicik: " + enKicikk);
+
+
+        /* / 9 */
+
+        
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 10 */
+
+        console.log("                                        -10- \n");
+
+
+        let eded = prompt("Tek ve cutluyu yoxlamaq ucun bir eded yazin:");
+
+        eded = parseInt(eded);
+            
+
+        if (eded % 2 === 0) {
+            console.log(eded + " cutdur.");
+        } else {
+            console.log(eded + " tekdir.");
+        }
+
+
+
+        /* / 10 */
+
+        
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 11 */
+
+        console.log("                                        -11- \n");
+
+
+        let eded1 = prompt("Hesab ucun ilk ededi daxil edin:");
+
+        eded1 = parseInt(eded1);
+
+        let eded2 = prompt("Hesab ucun ikinci ededi daxil edin:");
+
+        eded2 = parseInt(eded2);
+
+        let emel = prompt("Riyazi emeli daxil edin: (+ , - , * , /)");
+            
+
+        switch (emel) {
+            case "+" :
+                console.log(eded1 + " + " + eded2 + " = " + (eded1 + eded2));
+                break;
+            
+            case "-" :
+                console.log(eded1 + " - " + eded2 + " = " + (eded1 - eded2));
+                break;
+
+            case "*" :
+                console.log(eded1 + " * " + eded2 + " = " + (eded1 * eded2));
+                break;
+
+            case "/" :
+                console.log(eded1 + " / " + eded2 + " = " + (eded1 / eded2));
+                break;
+        }
+
+
+        /* / 11 */
+
+        
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 12 */
+
+        console.log("                                        -12- \n");
+
+
+        let daxEded = prompt("Bolunen yoxlamaq ucun eded daxil edin: ")
+
+        daxEded = parseInt(daxEded);
+
+        console.log(daxEded + " ededine bolunen 3 reqemli ededler: \n");
+
+        for (i=100; i<=999; i++) {
+            if (i % daxEded === 0) {
+                console.log(i);
+            }
+        }
+
+        /* / 12 */
+
+        
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 13 */
+
+        console.log("                                        -13- \n");
+
+
+        let daxEded2 = prompt("Bolenleri tapmaq ucun eded daxil edin: ")
+
+        daxEded2 = parseInt(daxEded2);
+
+        console.log(daxEded2 + " ededini tam bolen ededler: \n");
+
+        for (i=1; i<=daxEded2; i++) {
+            if (daxEded2 % i === 0) {
+                console.log(i);
+            }
+        }
+
+
+        /* / 13 */
+
+        
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 14 */
+
+        console.log("                                        -14- \n");
+
+
+        let ededNew = 12;
+
+        console.log("12 ededi hansi iki ededin cemi ola biler:");
+
+        // İki for döngüsü ile tüm kombinasyonları kontrol etme
+        for (let i = 1; i <= ededNew / 2; i++) {
+            for (let j = i; j <= ededNew; j++) {
+                if (i + j === ededNew) {
+                    console.log(i + " + " + j + " = " + ededNew);
+                }
+            }
+        }
+
+
+
+        /* / 14 */
+
+        
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 15 */
+
+        console.log("                                        -15- \n");
+
+
+        console.log("iki deyisenin yerin deyisen proqram: \n\n");
+    
+        let a=18;
+        let b=27;
+        console.log("Deyismeden once: \n a = " + a + " \n b = " + b);
+        
+        c=a
+        a=b;
+        b=c;
+        console.log("Deyismeden sonra: \n a = " + a + " \n b = " + b);
+
+
+        /* / 15 */
+
+        
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 16 */
+
+        console.log("                                        -16- \n");
+
+
+        console.log("Verilmis ededin tam olub olmamasini yoxlayan proqram: \n\n");
+    
+        let tamEded = 14.567
+
+        if (tamEded % 1 === 0){
+            console.log(tamEded + " ededi tam ededdir");
+        } else {
+            console.log(tamEded + " ededi tam eded deyil");
+        }
+
+
+        /* / 16 */
+
+        
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 17 */
+
+        console.log("                                        -17- \n");
+
+
+        let number = 27;
+        console.log
+        (number+
+        " ededinin: \n 5-ci derece quvveti = "+
+        number**5 + 
+        "\n ve 3-e bolunmeden alinan qaligi = "+
+        number%3);
+
+
+        /* / 17 */
+
+        
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 18 */
+
+        console.log("                                        -18- \n");
+
+
+        console.log("Daxil edilen temperatura esasen havanin isti, cox isti, soyuq, cox soyuq oldugunu gosteren proqram: \n\n");
+    
+        let temperatur = prompt("Temperaturu daxil edin:");
+        temperatur = parseInt(temperatur);
+
+        if (temperatur < 0) {
+            console.log("Hava cox soyuqdur ❄️");
+        } else if (temperatur >= 0 && temperatur <= 15) {
+            console.log("Hava soyuqdur 🥶");
+        } else if (temperatur > 15 && temperatur <= 30) {
+            console.log("Hava istidir 🥵");
+        } else if (temperatur > 30) {
+            console.log("Hava cox istidir 🔥");
+        } else {
+            alert("Temperatur yanlışdır.");
+        }
+
+
+        /* / 18 */
+
+        
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 19 */
+
+        console.log("                                        -19- \n");
+
+
+       console.log("Daxil edilen reqeme gore heftenin gununu deyen proqram: \n\n");
+    
+       let gun = prompt("Heftenin gununu reqemle daxil edin:");
+       gun = parseInt(gun);
+       
+       switch(gun) {
+           case 1:
+               console.log("Bazar ertesi");
+               break;
+           case 2:
+               console.log("Cersenbe axshami");
+               break;
+           case 3:
+               console.log("Cersenbe");
+               break;
+           case 4:
+               console.log("Cume axshami");
+               break;
+           case 5:
+               console.log("Cume");
+               break;
+           case 6:
+               console.log("Senbe");
+               break;
+           case 7:
+               console.log("Bazar");
+               break;
+           default:
+               console.log("Heftede cemi 7 gun var.");
+       }
+
+
+        /* / 19 */
+
+        
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 20 */
+
+        console.log("                                        -20- \n");
+
+
+        console.log("Daxil edilen ayin sira sayina esasen hansi fesil oldugun deyen proqram: \n\n");
+    
+        let ay=prompt("Feslini bilmek istediyiniz ayin sira sayin yazin:")
+       
+        ay=parseInt(ay)
+       
+        if(ay===12 || (ay>=1 && ay<3)){
+            console.log("Qis fesli")
+        }
+        else if(ay>=3 && ay<=5){
+            console.log("Yaz fesli")
+        }
+        else if(ay>=6 && ay<=8){
+            console.log("Yay fesli")
+        }
+        else if(ay>=9 && ay<=11){
+            console.log("Payiz fesli")
+        }
+        else{
+            console.log("Cemi 12 ay var.")
+        }
+
+
+        /* / 20 */
+
+
+    </script>
+</body>
+</html>
