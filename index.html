@@ -3,36 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Intro</title>
+    <title>JS 2</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+    
     <script>
         /* 1 */
 
         console.log("                                        -1- \n");
 
 
+        const array = [1, 2, 3, 4, 5];
 
-        let cem = 0;
+        console.log("Array: " + array);
 
-        for (let i = 1; i <= 10; i++) {
-            cem += i;
-        }
+        const cem = array.reduce((accumulator, currentValue)=>
+        accumulator + currentValue, 0)
 
-        console.log("1-den 10-a qeder ededlerin cemi: " + cem);
+        console.log("Array elementleri cemi: " + cem);
 
-        /*  */
-        console.log(" ");
-        /*  */
 
-        let hasil = 1;
+        const hasil = array.reduce((umumi, eded)=>
+        umumi * eded, 1)
 
-        for (let i = 1; i <= 10; i++) {
-            hasil *= i;
-        }
-
-        console.log("1-den 10-a qeder ededlerin cemi: " + hasil);
+        console.log("Array elementleri hasili: " + hasil);
+        
 
         /* / 1 */
 
@@ -47,41 +43,15 @@
         console.log("                                        -2- \n");
 
 
-        console.log("1-den 100-edek cut ededler: \n");
+        const array2 = [1, 2, 2, 3, 4, 5, 6, 6, 6, 7] ;
 
-        for (let i = 1; i <= 100; i++) {
-            if (i % 2 === 0) {
-                console.log(i);
-            }
-        }
+        console.log("Tekrarlanan elementli array: " + array2);
 
-        /*  */
-        console.log(" ");
-        /*  */
+        const newArray2 = [...new Set(array2)];
 
-        let cutlerCemi = 0;
+        console.log("Tekrarlanan elementler silinmis array: " + newArray2);
 
-        for (let i = 1; i <= 100; i++) {
-            if (i % 2 === 0) {
-                cutlerCemi += i;
-            }
-        }
         
-        console.log("1-den 100-edek cut ededlerin cemi: " + cutlerCemi);
-
-        /*  */
-        console.log(" ");
-        /*  */
-
-        let cutlerHasili = 1;
-
-        for (let i = 1; i <= 100; i++) {
-            if (i % 2 === 0) {
-                cutlerHasili *= i;
-            }
-        }
-        
-        console.log("1-den 100-edek cut ededlerin hasili: " + cutlerHasili);
 
         
         /* / 2 */
@@ -97,17 +67,14 @@
         console.log("                                        -3- \n");
 
 
-        let ededCemi = 0;
-        let ededSayi = 0;
+        const array3 = [1, 2, "uc", 4, null, undefined, {} ];
 
-        for (let i = 100; i <= 999; i++) {
-            ededCemi += i;
-            ededSayi++;
-        }
+        console.log("Array: " + array3);
 
-        let edediOrta = ededCemi / ededSayi;
+        const array3Ededler =
+        array3.filter(element=>typeof element === 'number');
 
-        console.log("Uc reqemli ededlerin ededi ortasi: " + edediOrta);
+        console.log("Arraydeki ededler: " + array3Ededler);
 
 
         /* / 3 */
@@ -122,16 +89,18 @@
 
         console.log("                                        -4- \n");
 
+        const array4 = [1,3,5,7]
+        console.log("Array: " + array4);
 
+        const array4Max = array4.reduce((umumi, eded) => (eded > umumi ? eded : umumi), array4[0]);
+        /*  const array4Max =Math.max(...array4); */
+        console.log("Arraydeki max deyer: " + array4Max);
 
-        console.log("7 ve 8-e bolunen ucreqemli ededler: \n ");
+        const array4Min = array4.reduce((umumi, eded) => (eded < umumi ? eded : umumi), array4[0]);
+        /* const array4Min = Math.min(...array4); */
+        console.log("Arraydeki min deyer: " + array4Min);
 
-        for (let i = 100; i <= 999; i++) {
-            if (i % 7 === 0 && i % 8 === 0) {
-                console.log(i);
-            }
-        }
-
+        
         /* / 4 */
 
         
@@ -144,16 +113,13 @@
 
         console.log("                                        -5- \n");
 
-        ucreqemliCem = 0;
+        /* ❗❗❗SRTING */
 
-        for (let i = 100; i <= 999; i++) {
-            if (i % 7 === 0 && i % 8 === 0) {
-                ucreqemliCem += i;
-            }
-        }
+        let cumle = prompt('Bir nece simvol daxil edin: ');
 
-        console.log("7 ve 8-e bolunen ucreqemli ededlerin cemi: " + ucreqemliCem);
+        let simvolSayi = cumle.length;
 
+        console.log(`Daxil edilen simvol sayi: ${simvolSayi}`);
 
         /* / 5 */
 
@@ -168,12 +134,13 @@
         console.log("                                        -6- \n");
 
 
-        for (let i = 100; i <= 999; i++) {
-            if (i % 7 === 0 && i % 8 === 0) {
-                console.log("7 ve 8-e bolunen ilk ucreqemli eded: " + i);
-                break;
-            }
-        }
+        const array5 = [1, 2, 3, 4, 5, 6];
+
+        console.log("Array: " + array5);
+
+        const array5x2 = array5.map (element => element * 2)
+
+        console.log("Array * 2: " + array5x2);
 
 
         /* / 6 */
@@ -189,13 +156,11 @@
         console.log("                                        -7- \n");
 
 
-        for (let i = 100; i <= 999; i++) {
-            if (i % 7 === 0 && i % 8 === 0) {
-                son=i;
-            }
-        }
-        
-        console.log("7 ve 8-e bolunen son ucreqemli eded: " + son);
+        const array6 = [1, 2, 3, 4, 5]
+
+        console.log("Array: "+array6);
+
+        console.log("Ters array: "+ array6.reverse());
 
 
         /* / 7 */
@@ -211,24 +176,27 @@
         console.log("                                        -8- \n");
 
 
-        console.log("1-den 100-dek sade ve murekkeb ededler: \n\n");
-    
-        for (let i = 1; i <= 100; i++) {
-            let murekkebEded = false;
+        /* ❗❗❗SRTING */
 
-            for (let j = 2; j < i; j++) {
-                if (i % j === 0) {
-                    murekkebEded = true;
-                }
+
+        let arrayBir = [1, 2, 3, 4, 5];
+        console.log("Array 1: ", arrayBir); 
+
+        let arrayIki = [6, 7, 8, 9, 10];
+        console.log("Array 2: ", arrayIki); 
+        
+        if (arrayBir.length !== arrayIki.length) {
+            alert('Arraylarin uzunlugu eyni olmalidir !');
+        } else {
+            let cemArray = [];
+
+            
+            for (let i = 0; i < arrayBir.length; i++) {
+                cemArray.push(arrayBir[i] + arrayIki[i]);
             }
 
-            if (murekkebEded) {
-                console.log(i + " murekkeb ededdir");
-            } else {
-                console.log(i + " sade ededdir");
-            }
+            console.log('Arraylarin elementleri cemi: ', cemArray);
         }
-
 
         /* / 8 */
 
@@ -242,45 +210,16 @@
 
         console.log("                                        -9- \n");
 
+        /* ❗❗❗SRTING */
+        
+        
+        let input = prompt('Ters cevirmek ucun birsey yazin:');
 
-        console.log("Verilmis ededlerin :");
+        
+        let reversed = input.split('').reverse().join('');
 
-        let num1 = 45;
-        let num2 = 78;
-        let num3 = 23;
-
-        let enBoyuk = Math.max(num1, num2, num3);
-        let enKicik = Math.min(num1, num2, num3);
-
-        console.log("En boyuyu: " + enBoyuk);
-        console.log("En kiciyi: " + enKicik);
-
-        /* ve ya: */ console.log("Ve ya : \n");
-
-        let numb1 = 27;
-        let numb2 = 53;
-        let numb3 = 85;
-
-
-        let enBoyukk = numb1;
-        if (numb2 > enBoyukk) {
-            enBoyukk = numb2;
-        }
-        if (numb3 > enBoyukk) {
-            enBoyukk = numb3;
-        }
-
-
-        let enKicikk = numb1;
-        if (numb2 < enKicikk) {
-            enKicikk = numb2;
-        }
-        if (numb3 < enKicikk) {
-            enKicikk = numb3;
-        }
-
-        console.log("En boyuk: " + enBoyukk);
-        console.log("En kicik: " + enKicikk);
+        
+        console.log('Ters cevrilmis metn:', reversed);
 
 
         /* / 9 */
@@ -296,18 +235,16 @@
         console.log("                                        -10- \n");
 
 
-        let eded = prompt("Tek ve cutluyu yoxlamaq ucun bir eded yazin:");
+        /* ❗❗❗SRTING */
 
-        eded = parseInt(eded);
-            
+       
+        let sentence = prompt('Sozleri ters cevirmek ucun cumle yazin:');
 
-        if (eded % 2 === 0) {
-            console.log(eded + " cutdur.");
-        } else {
-            console.log(eded + " tekdir.");
-        }
+        
+        let reversedSentence = sentence.split(' ').reverse().join(' ');
 
-
+        
+        console.log('Ters cevrilmis cumle:', reversedSentence);
 
         /* / 10 */
 
@@ -321,36 +258,30 @@
 
         console.log("                                        -11- \n");
 
+        /* ❗❗❗SRTING */
+       
+        let number = prompt('1-10 arasi reqem yazin :');
 
-        let eded1 = prompt("Hesab ucun ilk ededi daxil edin:");
+        const numberWords = {
+            '0': 'sifir',
+            '1': 'bir',
+            '2': 'iki',
+            '3': 'üc',
+            '4': 'dort',
+            '5': 'bes',
+            '6': 'alti',
+            '7': 'yeddi',
+            '8': 'sekkiz',
+            '9': 'doqquz',
+            '10': 'on'
+        };
 
-        eded1 = parseInt(eded1);
+        let convertedNumber = number.split('').map(char => {
+            return numberWords[char] !== undefined ? numberWords[char] : char;
+        }).join('');
 
-        let eded2 = prompt("Hesab ucun ikinci ededi daxil edin:");
 
-        eded2 = parseInt(eded2);
-
-        let emel = prompt("Riyazi emeli daxil edin: (+ , - , * , /)");
-            
-
-        switch (emel) {
-            case "+" :
-                console.log(eded1 + " + " + eded2 + " = " + (eded1 + eded2));
-                break;
-            
-            case "-" :
-                console.log(eded1 + " - " + eded2 + " = " + (eded1 - eded2));
-                break;
-
-            case "*" :
-                console.log(eded1 + " * " + eded2 + " = " + (eded1 * eded2));
-                break;
-
-            case "/" :
-                console.log(eded1 + " / " + eded2 + " = " + (eded1 / eded2));
-                break;
-        }
-
+        console.log('Cevrilmis reqem : ', convertedNumber);
 
         /* / 11 */
 
@@ -364,18 +295,19 @@
 
         console.log("                                        -12- \n");
 
+        /* ❗❗❗SRTING */
+        
+        
+        let text = prompt('Bir nece soz yazin :');
 
-        let daxEded = prompt("Bolunen yoxlamaq ucun eded daxil edin: ")
 
-        daxEded = parseInt(daxEded);
+        let words = text.split(' ').filter(word => word.length > 0);
 
-        console.log(daxEded + " ededine bolunen 3 reqemli ededler: \n");
 
-        for (i=100; i<=999; i++) {
-            if (i % daxEded === 0) {
-                console.log(i);
-            }
-        }
+        let wordCount = words.length;
+
+
+        console.log('Sozlerin sayi: ', wordCount);
 
         /* / 12 */
 
@@ -389,19 +321,16 @@
 
         console.log("                                        -13- \n");
 
+        /* ❗❗❗SRTING */
+        
+        
+        let sentence2 = prompt('Artiq bosluqlari silmekcun cumle yaz :');
 
-        let daxEded2 = prompt("Bolenleri tapmaq ucun eded daxil edin: ")
+        
+        let cleanedSentence = sentence2.replace(/\s+/g, ' ').trim();
 
-        daxEded2 = parseInt(daxEded2);
-
-        console.log(daxEded2 + " ededini tam bolen ededler: \n");
-
-        for (i=1; i<=daxEded2; i++) {
-            if (daxEded2 % i === 0) {
-                console.log(i);
-            }
-        }
-
+       
+        console.log('Artiq bosluqlari silinmis cumle : ', cleanedSentence);
 
         /* / 13 */
 
@@ -416,18 +345,30 @@
         console.log("                                        -14- \n");
 
 
-        let ededNew = 12;
+        /* ❗❗❗SRTING */
 
-        console.log("12 ededi hansi iki ededin cemi ola biler:");
+       
+        let newText = "salam. bu bir metndir. sagolun.";
+        console.log("Metn: ", newText);
 
-        // İki for döngüsü ile tüm kombinasyonları kontrol etme
-        for (let i = 1; i <= ededNew / 2; i++) {
-            for (let j = i; j <= ededNew; j++) {
-                if (i + j === ededNew) {
-                    console.log(i + " + " + j + " = " + ededNew);
-                }
+
+        let sentences = newText.split(/(?<=\.)\s+/);
+
+
+        let updatedSentences = sentences.map(sentence => {
+            let words = sentence.split(' ');
+            if (words.length > 0) {
+
+                words[0] = words[0].charAt(0).toUpperCase() + words[0].slice(1);
             }
-        }
+            return words.join(' ');
+        });
+
+
+        let updatedText = updatedSentences.join(' ');
+
+
+        console.log('Güncellenmiş metin:', updatedText);
 
 
 
@@ -443,18 +384,26 @@
 
         console.log("                                        -15- \n");
 
+        function arraysEynilik(arr1, arr2) {
+            if (arr1.length !== arr2.length) return " Eyni deyil";
+            for (let i = 0; i < arr1.length; i++) {
+                if (arr1[i] !== arr2[i]) return " Eyni deyil";
+            }
+            return " Eynidir";
+        }
 
-        console.log("iki deyisenin yerin deyisen proqram: \n\n");
-    
-        let a=18;
-        let b=27;
-        console.log("Deyismeden once: \n a = " + a + " \n b = " + b);
+        const array111 = [1, 2, 3, 4];
+        const array222 = [1, 2, 3, 4];
+        const array333 = [1, 3, 4, 5];
+        const array444 = [1, 3, 4, 5, 10];
+
+
+        console.log(array111 + " ve " + array222 + arraysEynilik(array111, array222)); 
+        console.log(array111 + " ve " + array333 + arraysEynilik(array111, array333)); 
+        console.log(array111 + " ve " + array444 + arraysEynilik(array111, array444)); 
+
+
         
-        c=a
-        a=b;
-        b=c;
-        console.log("Deyismeden sonra: \n a = " + a + " \n b = " + b);
-
 
         /* / 15 */
 
@@ -469,16 +418,48 @@
         console.log("                                        -16- \n");
 
 
-        console.log("Verilmis ededin tam olub olmamasini yoxlayan proqram: \n\n");
-    
-        let tamEded = 14.567
+     
 
-        if (tamEded % 1 === 0){
-            console.log(tamEded + " ededi tam ededdir");
-        } else {
-            console.log(tamEded + " ededi tam eded deyil");
+        const arrayyy = [5, 2, 9, 1, 6];
+        console.log("Array: " + arrayyy);
+
+
+        function artanSira(arr) {
+            let n = arr.length;
+            for (let i = 0; i < n - 1; i++) {
+                for (let j = 0; j < n - i - 1; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        let temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+            return arr;
         }
 
+        console.log("Artan sira ile array: " + artanSira(arrayyy));
+
+
+
+        function azalanSira(arr) {
+            let n = arr.length;
+            for (let i = 0; i < n - 1; i++) {
+                for (let j = 0; j < n - i - 1; j++) {
+                    if (arr[j] < arr[j + 1]) {
+                        let temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
+
+        console.log("Azalan sira ile array: " + azalanSira(arrayyy));
+
+
+       
 
         /* / 16 */
 
@@ -492,14 +473,16 @@
 
         console.log("                                        -17- \n");
 
+        /* ❗❗❗SRTING */
+        
+        
+        let numbers = prompt('Bitisik halda reqemler yazin :');
 
-        let number = 27;
-        console.log
-        (number+
-        " ededinin: \n 5-ci derece quvveti = "+
-        number**5 + 
-        "\n ve 3-e bolunmeden alinan qaligi = "+
-        number%3);
+        
+        let spacedNumbers = numbers.split('').join(' ');
+
+        
+        console.log('Bosluqlarla reqemler: ', spacedNumbers);
 
 
         /* / 17 */
@@ -514,22 +497,31 @@
 
         console.log("                                        -18- \n");
 
+        /* ❗❗❗SRTING */
+        
+        
+        let tekrarliText = "Tekrar tekrar bir iki uc uc"
 
-        console.log("Daxil edilen temperatura esasen havanin isti, cox isti, soyuq, cox soyuq oldugunu gosteren proqram: \n\n");
-    
-        let temperatur = prompt("Temperaturu daxil edin:");
-        temperatur = parseInt(temperatur);
+        
+        let textWords = tekrarliText.toLowerCase().split(/\s+/);
 
-        if (temperatur < 0) {
-            console.log("Hava cox soyuqdur ❄️");
-        } else if (temperatur >= 0 && temperatur <= 15) {
-            console.log("Hava soyuqdur 🥶");
-        } else if (temperatur > 15 && temperatur <= 30) {
-            console.log("Hava istidir 🥵");
-        } else if (temperatur > 30) {
-            console.log("Hava cox istidir 🔥");
-        } else {
-            alert("Temperatur yanlışdır.");
+        
+        let tekrarlananWordCount = {};
+
+        
+        textWords.forEach(word => {
+            if (tekrarlananWordCount[word]) {
+                tekrarlananWordCount[word]++;
+            } else {
+                tekrarlananWordCount[word] = 1;
+            }
+        });
+
+        
+        for (let word in tekrarlananWordCount) {
+            if (tekrarlananWordCount[word] > 1) {
+                console.log(`'${word}': ${tekrarlananWordCount[word]} defe`);
+            }
         }
 
 
@@ -545,37 +537,38 @@
 
         console.log("                                        -19- \n");
 
+        /* ❗❗❗SRTING */
+      
+        let students = {
+            aynur: {
+                examScore: 35
+            },
+            rasim: {
+                examScore: 16
+            },
+            leyla: {
+                examScore: 25
+            },
+            elvin: {
+                examScore: 13
+            },
+            nicat: {
+                examScore: 50
+            }
+        };
+        
+        
+        let validStudents = [];
 
-       console.log("Daxil edilen reqeme gore heftenin gununu deyen proqram: \n\n");
-    
-       let gun = prompt("Heftenin gununu reqemle daxil edin:");
-       gun = parseInt(gun);
-       
-       switch(gun) {
-           case 1:
-               console.log("Bazar ertesi");
-               break;
-           case 2:
-               console.log("Cersenbe axshami");
-               break;
-           case 3:
-               console.log("Cersenbe");
-               break;
-           case 4:
-               console.log("Cume axshami");
-               break;
-           case 5:
-               console.log("Cume");
-               break;
-           case 6:
-               console.log("Senbe");
-               break;
-           case 7:
-               console.log("Bazar");
-               break;
-           default:
-               console.log("Heftede cemi 7 gun var.");
-       }
+        for (let student in students) {
+            if (students[student].examScore >= 17) {
+                validStudents.push(student);
+            }
+        }
+        
+        let resultString = validStudents.join(', ');
+
+        console.log('Imtahandan kecenler: ', resultString);
 
 
         /* / 19 */
@@ -590,31 +583,632 @@
 
         console.log("                                        -20- \n");
 
+        /* ❗❗❗SRTING */
+        
+            function getTrigrams(text) {
 
-        console.log("Daxil edilen ayin sira sayina esasen hansi fesil oldugun deyen proqram: \n\n");
-    
-        let ay=prompt("Feslini bilmek istediyiniz ayin sira sayin yazin:")
-       
-        ay=parseInt(ay)
-       
-        if(ay===12 || (ay>=1 && ay<3)){
-            console.log("Qis fesli")
+            let words = text.split(/\s+/);
+                
+            
+            let trigrams = [];
+                
+            
+            for (let i = 0; i < words.length - 2; i++) {
+                trigrams.push(words.slice(i, i + 3).join(' '));
+            }
+
+            return trigrams;
         }
-        else if(ay>=3 && ay<=5){
-            console.log("Yaz fesli")
+
+        function calculateSimilarity(text1, text2) {
+            
+            let trigrams1 = getTrigrams(text1);
+            let trigrams2 = getTrigrams(text2);
+
+            
+            let set1 = new Set(trigrams1);
+            let set2 = new Set(trigrams2);
+
+            
+            let intersection = new Set([...set1].filter(x => set2.has(x)));
+
+            
+            let similarity = (2 * intersection.size) / (set1.size + set2.size);
+
+            return similarity;
         }
-        else if(ay>=6 && ay<=8){
-            console.log("Yay fesli")
-        }
-        else if(ay>=9 && ay<=11){
-            console.log("Payiz fesli")
-        }
-        else{
-            console.log("Cemi 12 ay var.")
-        }
+
+        
+        let text1 = "Bu bir ornek metndir ve oxsarliq hesablanacaq. bir iki uc";
+        let text2 = "Bu ornek metn oxsarliq hesaplanmasi ucun islenecek. bir iki uc";
+
+        
+        let similarity = calculateSimilarity(text1, text2);
+
+        console.log(`Oxsarliq emsali :  ${similarity}`);
 
 
         /* / 20 */
+
+
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 21 */
+
+        console.log("                                        -21- \n");
+
+        /* ❗❗❗SRTING */
+        
+        
+        let workers = {
+            worker1: {
+                hourlyWage: 10,
+                weeklyHours: 45
+            },
+            worker2: {
+                hourlyWage: 12,
+                weeklyHours: 38
+            },
+            worker3: {
+                hourlyWage: 15,
+                weeklyHours: 50
+            }
+        };
+
+        
+        function calculateMonthlySalary(hourlyWage, weeklyHours) {
+            let regularHours = Math.min(weeklyHours, 40);
+            let overtimeHours = Math.max(weeklyHours - 40, 0);
+
+            let weeklySalary = (regularHours * hourlyWage) + (overtimeHours * hourlyWage * 2);
+            let monthlySalary = weeklySalary * 4; 
+
+            return monthlySalary;
+        }
+
+        
+        for (let worker in workers) {
+            let hourlyWage = workers[worker].hourlyWage;
+            let weeklyHours = workers[worker].weeklyHours;
+            let monthlySalary = calculateMonthlySalary(hourlyWage, weeklyHours);
+
+            console.log(`${worker} adli isciinin ayliq maasi: ${monthlySalary} AZN`);
+        }
+
+
+        /* / 21 */
+
+
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 22 */
+
+        console.log("                                        -22- \n");
+
+        /* ❗❗❗SRTING */
+        
+        
+        let uniText = "ADNA universtetinde oxuyuram. ADNA cox yaxsi universitetdir. ADNA telebeleri cox bacariqlidir.";
+
+        
+        let updatedUniText = uniText.replace(/ADNA/g, "ADNSU");
+
+        
+        console.log(updatedUniText);
+
+
+        /* / 22 */
+
+
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 23 */
+
+        console.log("                                        -23- \n");
+
+        /* ❗❗❗SRTING */
+        
+        function sumOfDigits(number) {
+            
+            let digits = number.toString().split('');
+            let sum = 0;
+
+            for (let digit of digits) {
+                sum += parseInt(digit);
+            }
+
+            return sum;
+        }
+
+        
+        let ucReqemliNumber = 465;
+        let result = sumOfDigits(ucReqemliNumber);
+        console.log(`${ucReqemliNumber} ededinin reqemleri cemi: ${result}`);
+
+
+        /* / 23 */
+
+
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 24 */
+
+        console.log("                                        -24- \n");
+
+        const yeniArray = [0, 1, 2, 3, 4, 5];
+
+        console.log("Array: " + yeniArray);
+            
+        function tekSira(array) {
+            let result = [];
+            for (let i = 1; i < array.length; i += 2) {
+                result.push(array[i]);
+            }
+            return result;
+        }
+        
+        console.log("Tek yerde duran elementleri: " + tekSira(yeniArray));
+
+        
+
+        /* / 24 */
+
+
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 25 */
+
+        console.log("                                        -25- \n");
+
+        function countDivisibleByFive(array) {
+            let count = 0;
+                
+            for (let number of array) {
+                if (number % 5 === 0) {
+                    count++;
+                }
+            }
+
+            return count;
+        }
+
+        
+        let numbers999 = [10, 23, 45, 60, 22, 5, 7, 100, 3];
+        let result999 = countDivisibleByFive(numbers999);
+        console.log(`Array daxilinde 5-e bolunen ededlerin sayi: ${result999}`);
+
+        
+
+        /* / 25 */
+
+
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 26 */
+
+        console.log("                                        -26- \n");
+
+        function findLastDivisibleBySeven(array) {
+            let lastNumber = null;
+                
+            for (let number of array) {
+                if (number % 7 === 0) {
+                    lastNumber = number;
+                }
+            }
+
+            return lastNumber;
+        }
+
+        
+        let numbers1212 = [10, 23, 14, 60, 22, 5, 7, 100, 21, 3];
+        let result1212 = findLastDivisibleBySeven(numbers1212);
+        if (result1212 !== null) {
+            console.log(`Array daxilinde 7-e bolunen sonuncu eded: ${result1212}`);
+        } else {
+            console.log('Array daxilinde 7-e bolunen yoxdur.');
+        }
+
+        
+
+        /* / 26 */
+
+
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 27 */
+
+        console.log("                                        -27- \n");
+
+        function swapMinMax(array) {
+            if (array.length === 0) return array; 
+
+            
+            let minIndex = 0;
+            let maxIndex = 0;
+
+            for (let i = 1; i < array.length; i++) {
+                if (array[i] < array[minIndex]) {
+                    minIndex = i;
+                }
+                if (array[i] > array[maxIndex]) {
+                    maxIndex = i;
+                }
+            }
+        
+            
+            let temp = array[minIndex];
+            array[minIndex] = array[maxIndex];
+            array[maxIndex] = temp;
+        
+            return array;
+        }
+
+        
+        let numbers1234 = [10, 23, 5, 60, 22, 5, 7, 100, 21, 3];
+        let result1234 = swapMinMax(numbers1234);
+        console.log('Array icindeki en boyuk ve en kicik reqemlerin yeri deyismis hali: ', result1234);
+
+        
+
+        /* / 27 */
+
+
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 28 */
+
+        console.log("                                        -28- \n");
+
+        function getRandomElement(array) {
+            if (array.length === 0) return null; 
+
+            
+            let randomIndex = Math.floor(Math.random() * array.length);
+
+            
+            return array[randomIndex];
+        }
+
+        
+        let numbers777 = [10, 23, 5, 60, 22, 7, 100, 21, 3];
+        let randomElement = getRandomElement(numbers777);
+        console.log('Array icinden random secilmis element: ', randomElement);
+
+        
+
+        /* / 28 */
+
+
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 29 */
+
+        console.log("                                        -29- \n");
+
+        /* ❗❗❗SRTING */
+        
+        function isPrime(num) {
+            if (num <= 1) return false; 
+            if (num <= 3) return true;  
+
+            
+            if (num % 2 === 0 || num % 3 === 0) return false;
+
+            
+            for (let i = 5; i * i <= num; i += 6) {
+                if (num % i === 0 || num % (i + 2) === 0) return false;
+            }
+        
+            return true;
+        }
+
+        function printPrimeNumbers() {
+            for (let i = 1; i <= 100; i++) {
+                if (isPrime(i)) {
+                    console.log(i);
+                }
+            }
+        }
+
+        
+        printPrimeNumbers();
+
+
+        /* / 29 */
+
+
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 30 */
+
+        console.log("                                        -30- \n");
+
+        /* ❗❗❗SRTING */
+
+        function isPalindrome(str) {
+            
+            let cleanedStr = str.replace(/\s+/g, '').toLowerCase();
+
+            
+            let reversedStr = cleanedStr.split('').reverse().join('');
+
+            
+            return cleanedStr === reversedStr;
+        }
+
+        
+        let input777 = "121";
+        if (isPalindrome(input777)) {
+            console.log(`"${input777}" ifadesi polindromdur.`);
+        } else {
+            console.log(`"${input777}" ifadesi polindrom deyil.`);
+        }
+
+        
+
+        /* / 30 */
+
+
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 31 */
+
+        console.log("                                        -31- \n");
+
+        /* ❗❗❗SRTING */
+        
+        function areAnagrams(word1, word2) {
+            
+            let cleanedWord1 = word1.replace(/\s+/g, '').toLowerCase();
+            let cleanedWord2 = word2.replace(/\s+/g, '').toLowerCase();
+
+            
+            let sortedWord1 = cleanedWord1.split('').sort().join('');
+            let sortedWord2 = cleanedWord2.split('').sort().join('');
+
+            return sortedWord1 === sortedWord2;
+        }
+
+        
+        let word1 = "oslo";
+        let word2 = "solo";
+
+        if (areAnagrams(word1, word2)) {
+            console.log(`"${word1}" ve "${word2}" sozleri anaqramdir.`);
+        } else {
+            console.log(`"${word1}" ve "${word2}" sozleri anaqram deyil.`);
+        }
+
+
+        /* / 31 */
+
+
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 32 */
+
+        console.log("                                        -32- \n");
+
+        /* ❗❗❗SRTING */
+        
+        function removeVowels(text) {
+            
+            let vowelsRegex = /[aeiouAEIOU]/g;
+                
+            
+            let result = text.replace(vowelsRegex, '');
+                
+            return result;
+        }
+
+        
+        let inputText = "Bu bir test metnidir.";
+        let outputText = removeVowels(inputText);
+        console.log('Saitler silindikden sonra metn:', outputText);
+
+
+        /* / 32 */
+
+
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 33 */
+
+        console.log("                                        -33- \n");
+
+        /* ❗❗❗SRTING */
+        
+        function generateRandomString(length) {
+                const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                let result = '';
+
+                for (let i = 0; i < length; i++) {
+                    
+                    const randomIndex = Math.floor(Math.random() * characters.length);
+                    result += characters[randomIndex];
+                }
+
+                return result;
+            }
+
+            
+            let userInput = prompt("Necə eded simvoldan ibaret bir string yaratmaq isteyirsiniz?");
+
+            
+            let length = parseInt(userInput);
+
+            
+            if (!isNaN(length) && length > 0) {
+                let randomString = generateRandomString(length);
+                console.log(`Daxil edilen ${length} simvoldan ibarət random string : ${randomString}`);
+            } /* else {
+                console.log("Uzunluq uzlasmir");
+            } */
+
+
+        /* / 33 */
+
+
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 34 */
+
+        console.log("                                        -34- \n");
+
+        /* ❗❗❗SRTING */
+        
+        function countVowelsAndConsonants(word) {
+            
+            const vowelsRegex = /[aeiouAEIOU]/g;
+            const consonantsRegex = /[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ]/g;
+
+            
+            const vowelsCount = (word.match(vowelsRegex) || []).length;
+            const consonantsCount = (word.match(consonantsRegex) || []).length;
+
+            return {
+                vowels: vowelsCount,
+                consonants: consonantsCount
+            };
+        }
+
+        
+        let inputWord = prompt("Bir soz daxil edin:");
+
+        
+        let resulttt = countVowelsAndConsonants(inputWord);
+
+        console.log(`Sozdeki sait sayi: ${resulttt.vowels}`);
+        console.log(`Sozdeki samit sayi: ${resulttt.consonants}`);
+
+
+        /* / 34 */
+
+
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 35 */
+
+        console.log("                                        -35- \n");
+
+        /* ❗❗❗SRTING */
+        
+        function isPerfectNumber(num) {
+            if (num <= 1) return false; 
+
+            let sumOfDivisors = 0;
+
+            
+            for (let i = 1; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    if (i !== num) sumOfDivisors += i;
+                    if (i !== 1 && i !== num / i && num / i !== num) sumOfDivisors += num / i;
+                }
+            }
+
+            
+            return sumOfDivisors === num;
+        }
+
+        
+        let inputNumber = parseInt(prompt("Bir eded daxil edin:"));
+        if (!isNaN(inputNumber) && inputNumber > 0) {
+            if (isPerfectNumber(inputNumber)) {
+                console.log(`${inputNumber} mukemmel ededdir.`);
+            } else {
+                console.log(`${inputNumber} mukemmel eded deyil.`);
+            }
+        } /* else {
+            console.log("Eded error");
+        } */
+
+
+        /* / 35 */
+
+
+        /* ================================================= */
+        console.log("            ========================================== \n            ==========================================");
+        /* ================================================= */
+
+
+        /* 36 */
+
+        console.log("                                        -36- \n");
+
+        /* ❗❗❗SRTING */
+        
+        function sumOfDigits(num) {
+            
+            let numStr = Math.abs(num).toString();
+
+            
+            let sum = 0;
+            for (let char of numStr) {
+                if (!isNaN(char)) { 
+                    sum += parseInt(char);
+                }
+            }
+
+            return sum;
+        }
+
+        
+        let inputNumber777 = parseInt(prompt("Bir eded daxil edin:"));
+        if (!isNaN(inputNumber777)) {
+            let result = sumOfDigits(inputNumber777);
+            console.log(`Reqemlerin cemi: ${result}`);
+        } /* else {
+            console.log("Eded error");
+        } */
+
+
+        /* / 36 */
 
 
     </script>

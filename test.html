@@ -4,30 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- <meta http-equiv="refresh" content="1">  -->
 </head>
 <body>
     <script>
-    console.log("Daxil edilen ayin sira sayina esasen hansi fesil oldugun deyen proqram: \n\n");
-    
-    let ay=prompt("Feslini bilmek istediyiniz ayin sira sayin yazin:")
 
-    ay=parseInt(ay)
 
-    if(ay===12 || (ay>=1 && ay<3)){
-        console.log("Qis fesli")
-    }
-    else if(ay>=3 && ay<=5){
-        console.log("Yaz fesli")
-    }
-    else if(ay>=6 && ay<=8){
-        console.log("Yay fesli")
-    }
-    else if(ay>=9 && ay<=11){
-        console.log("Payiz fesli")
-    }
-    else{
-        console.log("Cemi 12 ay var.")
-    }
+
+let students = {
+            aynur: {
+                examScore: 35,
+                yearlyGrade: 40
+            },
+            rasim: {
+                examScore: 16,
+                yearlyGrade: 20
+            },
+            leyla: {
+                examScore: 25,
+                yearlyGrade: 30
+            },
+            elvin: {
+                examScore: 18,
+                yearlyGrade: 35
+            },
+            nicat: {
+                examScore: 50,
+                yearlyGrade: 50
+            }
+        };
+        
+        
+        let validStudents = [];
+        
+        for (let student in students) {
+            if (students[student].examScore >= 17 && students[student].yearlyGrade >= 34) {
+                validStudents.push(student);
+            }
+        }
+        
+        
+        let resultString = validStudents.join(', ');
+        
+        
+        console.log('Bu smestr kesilmeyenler :', resultString);
+
+
+
+
+
+
+
     </script>
 </body>
 </html>
